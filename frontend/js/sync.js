@@ -4,9 +4,8 @@
  */
 
 // サーバAPIのベースURL（環境に応じて変更）
-const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? `${window.location.protocol}//${window.location.hostname}:5000`
-    : '';
+// フロントエンドと同じホスト名でポート5000を使用
+const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:5000`;
 
 const API_ENDPOINTS = {
     submit: `${API_BASE_URL}/api/submit`,
